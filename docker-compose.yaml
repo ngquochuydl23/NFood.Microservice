@@ -1,0 +1,41 @@
+version: '3.4'
+services:
+  nfood.driver.api:
+    image: nfood.notification.api
+    container_name: nfood.notification.api
+    build:
+      context: ./NFood.Notification.Service
+      dockerfile: Dockerfile
+    ports:
+      - 1000:1000
+    restart: always
+
+  nfood.notification.api:
+    image: nfood.notification.api
+    container_name: nfood.notification.api
+    build:
+      context: ./NFood.Notification.Service
+      dockerfile: Dockerfile
+    ports:
+      - 1100:1100
+    restart: always
+
+  nfood.storage.api:
+    image: nfood.storage.api
+    container_name: nfood.storage.api
+    build:
+      context: ./NFood.Storage.Service
+      dockerfile: Dockerfile
+    ports:
+      - 1200:1200
+    restart: always
+
+  nfood.restaurant.api:
+    image: nfood.restaurant.api
+    container_name: nfood.restaurant.api
+    build:
+      context: ./NFood.Restaurant.Service
+      dockerfile: Dockerfile
+    ports:
+      - 1300:1300
+    restart: always
