@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class SigninDto {
+public class SignInDto {
     @NotEmpty
     @NotNull
     @NotBlank
