@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const RestaurantSchema = require('../models/restaurant');
+const ScheduleSchema = require('../models/schedule')
 const geolib = require('geolib');
 
 // const auth = require('../config/oauth2');
@@ -10,9 +11,8 @@ const geolib = require('geolib');
 //     next()
 // })
 
-router.get('/restaurant', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-
         const restaurants = await RestaurantSchema
             .find({})
             .exec();
@@ -34,9 +34,9 @@ router.get('/restaurant', async (req, res) => {
     }
 });
 
-router.get('/restaurant/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
-        const restaurant = await RestaurantSchema.findById(req.params.id, '-contact')
+        const restaurant = await RestaurantSchema.findById(req.params.id, '-contact -hashPassword')
         if (!restaurant) {
             return res
                 .status(400)

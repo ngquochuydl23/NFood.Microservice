@@ -1,34 +1,31 @@
 const express = require('express');
 const router = express.Router();
-const RestaurantModel = require('../models/restaurant');
-const bcrypt = require('bcrypt');
+const RestaurantSchema = require('../models/restaurant');
+const ScheduleSchema = require('../models/schedule');
+
+// const auth = require('../config/oauth2');
+// middleware that is specific to this router
+// router.use((req, res, next) => {
+//     console.log('Time: ', Date.now())
+//     next()
+// })
 
 router.post('/', async (req, res) => {
+    const restaurantId = '65d60aefec74a44f273aec4a';
+
     try {
-        if (!(req.body.password)) {
-            return res
-                .status(400)
-                .send({
-                    statusCode: 400,
-                    error: 'body.password is null or empty'
-                });
-        }
-
-        const saltRounds = 10;
-        const hashPassword = await bcrypt.hashSync(req.body.password, saltRounds);
-
-        const restaurant = new RestaurantModel({
-            ...req.body,
-            hashPassword: hashPassword,
-            active: false
+        const schedule = new ScheduleSchema({
+            periods: req.body.periods,
+            restaurantId: restaurantId
         });
 
-        await restaurant.save();
+        await schedule.save();
+
         return res
             .status(201)
             .send({
                 statusCode: 201,
-                result: restaurant
+                result: schedule
             });
     } catch (error) {
         if (error.name === "ValidationError") {
@@ -52,6 +49,10 @@ router.post('/', async (req, res) => {
                 statusCode: 500
             });
     }
-})
+});
 
-module.exports = router;
+router.put('/', async (req, res) => {
+
+});
+
+module.exports = router;    

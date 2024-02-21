@@ -9,7 +9,6 @@ const RestaurantModel = require('../models/restaurant');
 //     next()
 // })
 
-
 router.get('/', async (req, res) => {
     try {
         const restaurant = await RestaurantModel.findById(req.params.id)
@@ -41,7 +40,7 @@ router.get('/', async (req, res) => {
 
 router.put('/', async (req, res) => {
     try {
-        const restaurant = await RestaurantModel.findById(req.params.id);
+        const restaurant = await RestaurantModel.findById(req.params.id, '-contact');
         if (!restaurant) {
             return res
                 .status(400)
@@ -65,6 +64,10 @@ router.put('/', async (req, res) => {
             });
     }
 })
+
+router.delete('/', async (req, res) => {
+
+});
 
 
 module.exports = router;

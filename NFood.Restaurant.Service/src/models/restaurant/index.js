@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const schemeConstants = require('./schemeConstant');
-const { BaseSchema } = require('../share.model');
+const { BaseSchema, whereNotDeleted } = require('../share.model');
 var textSearch = require('mongoose-partial-full-search');
 
 const RestaurantSchema = BaseSchema(schemeConstants.Collection, {
@@ -65,9 +65,18 @@ const RestaurantSchema = BaseSchema(schemeConstants.Collection, {
             text: true,
             required: [true, 'Address must be not null'],
         }
+    },
+    hashPassword: {
+        type: String,
+        required: [true, 'Password must be not null'],
+        min: [6, 'Password must be from 7 to 12'],
+        max: [12, 'Password must be from 7 to 12']
+    },
+    active: {
+        type: Boolean
     }
 });
-RestaurantSchema.plugin(textSearch);
+RestaurantSchema.pre('findOne', whereNotDeleted);
 RestaurantSchema.index({
     title: 'text',
     cuisine: 'text',
