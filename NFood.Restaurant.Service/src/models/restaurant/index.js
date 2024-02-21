@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
 const schemeConstants = require('./schemeConstant');
 const { BaseSchema } = require('../share.model');
+var textSearch = require('mongoose-partial-full-search');
 
-module.exports = mongoose.model(schemeConstants.Model, BaseSchema(schemeConstants.Collection, {
+const RestaurantSchema = BaseSchema(schemeConstants.Collection, {
     title: {
         type: String,
+        text: true,
         required: [true, 'Title must not be null']
     },
     thumbnail: {
@@ -15,7 +17,7 @@ module.exports = mongoose.model(schemeConstants.Model, BaseSchema(schemeConstant
         type: String,
         required: [true, 'Cover must be not null'],
     },
-    cuisine: [[String]],
+    cuisine: [{ type: [String], text: true }],
     ratingAndReviews: {
         type: Number,
         required: [false],
@@ -60,7 +62,16 @@ module.exports = mongoose.model(schemeConstants.Model, BaseSchema(schemeConstant
         },
         address: {
             type: String,
+            text: true,
             required: [true, 'Address must be not null'],
         }
     }
-})); 
+});
+RestaurantSchema.plugin(textSearch);
+RestaurantSchema.index({
+    title: 'text',
+    cuisine: 'text',
+    'location.address': 'text'
+});
+
+module.exports = mongoose.model(schemeConstants.Model, RestaurantSchema);

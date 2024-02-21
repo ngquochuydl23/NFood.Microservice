@@ -1205,6 +1205,11 @@ mongodb@5.9.1:
   optionalDependencies:
     "@mongodb-js/saslprep" "^1.1.0"
 
+mongoose-partial-full-search@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/mongoose-partial-full-search/-/mongoose-partial-full-search-0.0.6.tgz#af17eb61781bedb0b99f2229f4cd46cfeeff62dd"
+  integrity sha512-33lt6gczDoD562oAVGUtgldrMF/lh/hQF1NKLIVYdEd/I0LHHZDYiz2GBY+dt+LTX2XLQW3DCjfUg/+1qiX5qg==
+
 mongoose@^7.3.1:
   version "7.6.8"
   resolved "https://registry.npmjs.org/mongoose/-/mongoose-7.6.8.tgz"

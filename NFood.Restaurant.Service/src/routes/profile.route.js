@@ -39,5 +39,32 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.put('/', async (req, res) => {
+    try {
+        const restaurant = await RestaurantModel.findById(req.params.id);
+        if (!restaurant) {
+            return res
+                .status(400)
+                .send({
+                    statusCode: 400,
+                    error: 'Restaurant does not exist'
+                });
+        }
+
+        restaurant = {
+            ...restaurant,
+            ...req.body
+        }
+        await restaurant.save();
+    } catch (error) {
+        return res
+            .status(500)
+            .send({
+                error: error.message,
+                statusCode: 500
+            });
+    }
+})
+
 
 module.exports = router;
