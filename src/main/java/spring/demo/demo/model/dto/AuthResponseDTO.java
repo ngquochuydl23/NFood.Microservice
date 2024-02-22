@@ -1,15 +1,14 @@
 package spring.demo.demo.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import spring.demo.demo.entity.Driver;
 
 @Data
-@RequiredArgsConstructor
-@NoArgsConstructor
-public class AuthResponseDTO {
-    @NonNull
+@EqualsAndHashCode(callSuper = true)
+public class AuthResponseDto extends BaseResponseDto<DriverDto> {
     private String accessToken;
-    private String tokenType = "Bearer";
+
 }

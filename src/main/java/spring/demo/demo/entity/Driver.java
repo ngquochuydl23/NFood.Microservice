@@ -1,6 +1,7 @@
 package spring.demo.demo.entity;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -26,7 +27,7 @@ public class Driver {
 
     private String firstName;
     private String lastName;
-    private int age;
+    private Date birthDate;
     private String address;
     private String email;
 

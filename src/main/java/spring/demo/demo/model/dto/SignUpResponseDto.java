@@ -9,12 +9,9 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.Data;
-import spring.demo.demo.validator.Numberic;
 import spring.demo.demo.validator.Unique;
 
-@Data
-public class SignUpDto {
+public class SignUpResponseDto {
     @NotNull
     @NotBlank
     @NotEmpty
@@ -39,14 +36,10 @@ public class SignUpDto {
     @Unique(message = "Phone number already exists", fieldName = "phone")
     @Pattern(regexp = "((09|03|07|08|05)+([0-9]{8})\\b)", message = "Invalid phone number")
     private String phone;
-    
-    private String avatar;
 
     @NotNull
-    @Size(min = 8, message = "Password at least 8 characters")
-    @Pattern(regexp = "((?=.*\\d)|(?=.*\\W+))(?![.\\n"
-            + "])(?=.*[A-Z])(?=.*[a-z]).*$", message = "Password must contain a-z A-Z 0-9 and special characters")
-    private String password;
+    private String avatar;
+
     @NotNull
     private String imgIdentifyCardBefore;
     @NotNull

@@ -10,23 +10,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
 import spring.demo.demo.model.dto.SignUpDto;
-import spring.demo.demo.model.dto.AuthResponseDTO;
+import spring.demo.demo.model.dto.SignUpResponseDto;
+import spring.demo.demo.model.mapper.SignUpResponseDtoMapper;
+import spring.demo.demo.model.dto.AuthResponseDto;
 import spring.demo.demo.model.dto.SignInDto;
 import spring.demo.demo.services.AuthServiceImpl;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/driver-api/auth")
 public class AuthController {
     @Autowired
     private AuthServiceImpl authServiceImpl;
 
     @PostMapping("/sign-in")
     public ResponseEntity<?> signIn(@Valid @RequestBody SignInDto signinDto) {
-       
-       
+
         try {
-            AuthResponseDTO authResponseDTO = this.authServiceImpl.signIn(signinDto);
-            return ResponseEntity.ok().body(authResponseDTO);
+            AuthResponseDto authResponseDTO = this.authServiceImpl.signIn(signinDto);
+            int status = authResponseDTO.getStatusCode();
+            return status == 200 ? ResponseEntity.ok().body(authResponseDTO)
+                    : ResponseEntity.status(status).body(authResponseDTO);
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage().toString());
@@ -38,13 +41,13 @@ public class AuthController {
         return "Logout";
     }
 
-    
     @PostMapping("/sign-up")
-    public ResponseEntity<SignUpDto> signUp(@Valid @RequestBody SignUpDto signUpDto) {
+    public ResponseEntity<SignUpResponseDto> signUp(@Valid @RequestBody SignUpDto signUpDto) {
 
         int signUp = this.authServiceImpl.signUp(signUpDto);
+        SignUpResponseDto signUpResponseDto = SignUpResponseDtoMapper.toSignUpResponseDto(signUpDto);
 
-        return signUp == HttpStatus.OK.value() ? ResponseEntity.status(signUp).body(signUpDto)
+        return signUp == HttpStatus.OK.value() ? ResponseEntity.status(signUp).body(signUpResponseDto)
                 : ResponseEntity.status(signUp).body(null);
     }
 

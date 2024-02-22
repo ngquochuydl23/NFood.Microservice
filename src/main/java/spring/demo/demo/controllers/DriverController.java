@@ -15,7 +15,7 @@ import spring.demo.demo.model.dto.VehicleDto;
 import spring.demo.demo.services.DriverServiceImpl;
 
 @RestController
-@RequestMapping("/api/driver")
+@RequestMapping("/driver-api/driver")
 public class DriverController {
     @Autowired
     private DriverServiceImpl driverServiceImpl;
