@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Music\\NFood.Microservice\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj": {}
+    "D:\\spring\\demo\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Music\\NFood.Microservice\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj": {
+    "D:\\spring\\demo\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Music\\NFood.Microservice\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj",
+        "projectUniqueName": "D:\\spring\\demo\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj",
         "projectName": "NFood.FoodMenu.Service",
-        "projectPath": "C:\\Users\\admin\\Music\\NFood.Microservice\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Music\\NFood.Microservice\\NFood.FoodMenu.Service\\obj\\",
+        "projectPath": "D:\\spring\\demo\\NFood.FoodMenu.Service\\NFood.FoodMenu.Service.csproj",
+        "packagesPath": "C:\\Users\\DFK\\.nuget\\packages\\",
+        "outputPath": "D:\\spring\\demo\\NFood.FoodMenu.Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\DFK\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -76,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

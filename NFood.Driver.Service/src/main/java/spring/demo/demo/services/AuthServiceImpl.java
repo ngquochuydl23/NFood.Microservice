@@ -91,9 +91,9 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    @Transactional
-    public int signUp(SignUpDto signUpDto) {
-        if (this.driverRepository.existsByPhone(signUpDto.getPhone())) {
+    @Transactional(rollbackOn = Exception.class)
+    public int signUp(SignUpDto signUpDto) throws Exception {
+        if (driverRepository.existsByPhone(signUpDto.getPhone())) {
             return HttpStatus.CONFLICT.value();
         }
 
@@ -101,6 +101,7 @@ public class AuthServiceImpl implements AuthService {
             BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
             String encryptPwd = bCryptPasswordEncoder.encode(signUpDto.getPassword());
             signUpDto.setPassword(encryptPwd);
+
             Vehicle vehicle = VehicleMapper.toVehicleEntity(signUpDto);
             DriverLicense driverLicense = DriverLicenseMapper.toDriverLicenseEntity(signUpDto);
             Driver driver = DriverMapper.toDriverEntity(signUpDto);
@@ -108,13 +109,13 @@ public class AuthServiceImpl implements AuthService {
             driver.setLicensePlates(vehicle);
             driver.setNumberDriverLicense(driverLicense);
 
-            this.vehicleRepository.save(vehicle);
-            this.driverLicenseRepository.save(driverLicense);
-            this.driverRepository.save(driver);
+            vehicleRepository.save(vehicle);
+            driverLicenseRepository.save(driverLicense);
+            driverRepository.save(driver);
+
             return HttpStatus.OK.value();
         } catch (Exception e) {
-            e.printStackTrace();
-            return HttpStatus.BAD_REQUEST.value();
+            throw new Exception("Error in sign up", e);
         }
     }
 

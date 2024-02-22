@@ -8,6 +8,6 @@ import spring.demo.demo.model.dto.SignUpDto;
 
 @Service
 public interface AuthService {
-    public int signUp(SignUpDto signUpDto); 
+    public int signUp(SignUpDto signUpDto) throws Exception; 
     public AuthResponseDto signIn(SignInDto signInDto) throws Exception;
 }

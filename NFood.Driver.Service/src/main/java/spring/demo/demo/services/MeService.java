@@ -6,5 +6,5 @@ import spring.demo.demo.model.dto.DriverDto;
 
 @Service
 public interface MeService {
-    public DriverDto getProfile();
+    public DriverDto getProfile(String token);
 }

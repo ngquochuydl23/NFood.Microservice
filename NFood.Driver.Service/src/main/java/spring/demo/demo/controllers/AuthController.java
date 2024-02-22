@@ -12,6 +12,7 @@ import jakarta.validation.Valid;
 import spring.demo.demo.model.dto.SignUpDto;
 import spring.demo.demo.model.dto.SignUpResponseDto;
 import spring.demo.demo.model.mapper.SignUpResponseDtoMapper;
+import spring.demo.demo.exception.AppException;
 import spring.demo.demo.model.dto.AuthResponseDto;
 import spring.demo.demo.model.dto.SignInDto;
 import spring.demo.demo.services.AuthServiceImpl;
@@ -24,7 +25,6 @@ public class AuthController {
 
     @PostMapping("/sign-in")
     public ResponseEntity<?> signIn(@Valid @RequestBody SignInDto signinDto) {
-
         try {
             AuthResponseDto authResponseDTO = this.authServiceImpl.signIn(signinDto);
             int status = authResponseDTO.getStatusCode();
@@ -32,7 +32,7 @@ public class AuthController {
                     : ResponseEntity.status(status).body(authResponseDTO);
 
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage().toString());
+            throw new AppException(e.getMessage());
         }
     }
 
@@ -43,12 +43,15 @@ public class AuthController {
 
     @PostMapping("/sign-up")
     public ResponseEntity<SignUpResponseDto> signUp(@Valid @RequestBody SignUpDto signUpDto) {
+        try {
+            int signUp = this.authServiceImpl.signUp(signUpDto);
+            SignUpResponseDto signUpResponseDto = SignUpResponseDtoMapper.toSignUpResponseDto(signUpDto);
 
-        int signUp = this.authServiceImpl.signUp(signUpDto);
-        SignUpResponseDto signUpResponseDto = SignUpResponseDtoMapper.toSignUpResponseDto(signUpDto);
-
-        return signUp == HttpStatus.OK.value() ? ResponseEntity.status(signUp).body(signUpResponseDto)
-                : ResponseEntity.status(signUp).body(null);
+            return signUp == HttpStatus.OK.value() ? ResponseEntity.status(signUp).body(signUpResponseDto)
+                    : ResponseEntity.status(signUp).body(null);
+        } catch (Exception e) {
+            throw new AppException(e.getMessage());
+        }
     }
 
 }

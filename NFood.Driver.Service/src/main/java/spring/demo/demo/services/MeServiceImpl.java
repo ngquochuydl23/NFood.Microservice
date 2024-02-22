@@ -22,9 +22,8 @@ public class MeServiceImpl implements MeService {
     }
 
     @Override
-    public DriverDto getProfile() {
-        String phone = this.jwtUtils.extractUsername(
-                "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwODk4OTg5ODk4IiwiaWF0IjoxNzA4NTA2MTEyLCJleHAiOjE3MDg1OTI1MTJ9.s5oW33W7QcdwW9dOpm9PyYl_JKq4pfvq2B5O-HS-22fZcZNWUzwFXdxefk5PWGDyKqcbeZTB4QLR6MWumNlfeA");
+    public DriverDto getProfile(String token) {
+        String phone = this.jwtUtils.extractUsername(token);
         Driver driver = this.driverRepository.findByPhone(phone).orElse(null);
         return DriverMapper.toDriverDto(driver);
     }
