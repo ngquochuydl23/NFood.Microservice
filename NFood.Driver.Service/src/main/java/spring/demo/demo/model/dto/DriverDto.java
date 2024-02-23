@@ -14,8 +14,4 @@ public class DriverDto {
     private String email;
     private String phone;
     private String avatar;
-    private String imgIdCardBefore;
-    private String imgIdCardAfter;
-    private DriverLicenseDto numberDriverLicense;
-    private VehicleDto licensePlates;
 }

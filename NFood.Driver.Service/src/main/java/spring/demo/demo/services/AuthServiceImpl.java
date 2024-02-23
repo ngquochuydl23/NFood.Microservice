@@ -115,7 +115,7 @@ public class AuthServiceImpl implements AuthService {
 
             return HttpStatus.OK.value();
         } catch (Exception e) {
-            throw new Exception("Error in sign up", e);
+            throw new Exception(e.getMessage());
         }
     }
 
