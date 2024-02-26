@@ -8,7 +8,6 @@ const { logRequest, logError } = require('./middlewares/loggingMiddleware');
 const { configureMongoDb } = require('./config/mongodb');
 const restaurantRoute = require('./routes/restaurant.route');
 const { connectRedisDb } = require('./config/redis');
-const { cli } = require('winston/lib/winston/config');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,9 +22,9 @@ app.use(logRequest);
 app.use('/rating-api/', restaurantRoute);
 app.use(logError);
 
-app.listen(3000, () => {
+app.listen(1500, () => {
     configureMongoDb();
     connectRedisDb();
-    console.log(`App is listening on port ${3000}.`)
+    console.log(`App is listening on port ${1500}.`)
 })
 

@@ -33,6 +33,6 @@ app.use(logError);
 app.listen(1300, () => {
     configureMongoDb();
     connectRedisDb();
-    console.log(`App is listening on port ${1300}.`)
+    console.log(`App is listening on port ${1300}.`);
 })
 

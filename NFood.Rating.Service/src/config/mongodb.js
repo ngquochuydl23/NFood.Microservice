@@ -21,8 +21,9 @@ module.exports = {
       });
 
       mongoose.connection.on('error', error => {
+        console.log(error);
         //logger.error('Mongo connection has an error', error);
-        mongoose.disconnect()
+        mongoose.disconnect();
         reject()
       });
 
