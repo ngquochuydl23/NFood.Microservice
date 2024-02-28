@@ -6,6 +6,7 @@ const BaseSchema = (name, inheritSchema) => {
     {
       timestamps: true,
       collection: name,
+      isDeleted: { type: Boolean, defaults: false }
     }
   );
 }

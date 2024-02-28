@@ -20,41 +20,46 @@ router.get('/:restaurantId/', (req, res) => {
     }
 });
 
+
 router.post('/:restaurantId/', async (req, res) => {
     try {
         const restaurantId = req.params.restaurantId;
         const { content, rating, reviewerId } = req.body;
 
-        // find restaurant via grpc 
-        // -> throw not found
-        const result = await Promise.all([
-            findRestaurantById(req, restaurantId),
+        const [restaurant, reviewer] = await Promise
+            .all([
+                findRestaurantById(req, restaurantId),
+                (async) => ({
+                    id: 1,
+                    fullName: 'Nguyễn Quốc Huy',
+                    avatar: '/storage/image/'
+                })])
+            .catch((error) => {
+                return res
+                    .status(400)
+                    .send({
+                        error: error,
+                        statusCode: 400
+                    });
+            });
 
-        ])
-            .catch((error) => console.log(`Error in promises ${error}`));
+        const restaurantRating = new RestaurantRating({
+            content,
+            rating,
+            restaurantId,
+            reviewer: {
+                id: 1,
+                avatar: '/storage/',
+                fullName: 'Nguyễn Quốc Huy',
+            }
+        });
 
-        console.log(result);
-
-        // find user via grpc
-        // -> throw not found
-
-        // const restaurantRating = new RestaurantRating({
-        //     content,
-        //     rating,
-        //     restaurantId,
-        //     reviewer: {
-        //         id: 1,
-        //         avatar: '',
-
-        //     }
-        // });
-
-        // await restaurantRating.save();
+        await restaurantRating.save();
         return res
             .status(201)
             .send({
                 statusCode: 201,
-                result: 1
+                result: restaurantRating
             });
 
     } catch (error) {
