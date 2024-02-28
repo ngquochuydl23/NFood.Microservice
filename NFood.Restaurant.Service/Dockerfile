@@ -5,5 +5,5 @@ COPY . .
 
 RUN yarn install --silent && yarn add env-cmd
 
-EXPOSE 4000
+EXPOSE 1300
 CMD yarn start:production
