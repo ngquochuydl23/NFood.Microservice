@@ -7,7 +7,7 @@ const app = express();
 const { logRequest, logError } = require('./middlewares/loggingMiddleware');
 const { configureMongoDb } = require('./config/mongodb');
 const restaurantRoute = require('./routes/restaurant.route');
-const { connectRedisDb } = require('./config/redis');
+//const { connectRedisDb } = require('./config/redis');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,7 +24,7 @@ app.use(logError);
 
 app.listen(1500, () => {
     configureMongoDb();
-    connectRedisDb();
+    //connectRedisDb();
     console.log(`App is listening on port ${1500}.`)
 })
 

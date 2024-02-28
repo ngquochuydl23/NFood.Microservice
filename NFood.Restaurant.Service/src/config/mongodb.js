@@ -7,8 +7,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        dbName: 'NFood-Restaurant'
+        useUnifiedTopology: true
       });
 
       mongoose.connection.on('connected', () => {
@@ -23,6 +22,7 @@ module.exports = {
 
       mongoose.connection.on('error', error => {
         //logger.error('Mongo connection has an error', error);
+        console.log(error);
         mongoose.disconnect()
         reject()
       });

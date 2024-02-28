@@ -36,6 +36,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
+        console.log(req.params.id);
         const restaurant = await RestaurantSchema.findById(req.params.id, '-contact -hashPassword')
         if (!restaurant) {
             return res

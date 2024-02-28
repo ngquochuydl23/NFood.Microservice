@@ -8,11 +8,13 @@ function whereNotDeleted() {
 
 const BaseSchema = (name, inheritSchema) => {
   return new mongoose.Schema(
-    inheritSchema,
+    {
+      ...inheritSchema,
+      isDeleted: { type: Boolean, default: false }
+    },
     {
       timestamps: true,
-      collection: name,
-      isDeleted: { type: Boolean, defaults: false }
+      collection: name
     }
   );
 }

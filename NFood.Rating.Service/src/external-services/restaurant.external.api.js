@@ -1,4 +1,4 @@
-const { getHttp } = require('./base-external-api');
+const { getHttp } = require('./base-external-service');
 const { restaurantService } = require('./external-config');
 
 

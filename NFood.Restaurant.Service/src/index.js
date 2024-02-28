@@ -7,10 +7,10 @@ const app = express();
 const { logRequest, logError } = require('./middlewares/loggingMiddleware');
 const { configureMongoDb } = require('./config/mongodb');
 const { connectRedisDb } = require('./config/redis');
-const restaurantRoute = require('./routes/restaurant.route');
-const registerRoute = require('./routes/register.route');
-const profileRoute = require('./routes/profile.route');
-const scheduleRoute = require('./routes/schedule.route');
+const restaurantRoute = require('./public-routes/restaurant.route');
+const registerRoute = require('./public-routes/register.route');
+const profileRoute = require('./public-routes/profile.route');
+const scheduleRoute = require('./public-routes/schedule.route');
 const { RequestMapping } = require('./utils/requestMapping');
 
 

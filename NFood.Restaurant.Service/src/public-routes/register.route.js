@@ -20,7 +20,8 @@ router.post('/', async (req, res) => {
         const restaurant = new RestaurantModel({
             ...req.body,
             hashPassword: hashPassword,
-            active: false
+            active: false,
+            isDeleted: false
         });
 
         await restaurant.save();
