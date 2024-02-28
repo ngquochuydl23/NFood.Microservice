@@ -1,4 +1,4 @@
-const { BaseRatingSchema } = require('../driverRating/baseRatingSchema');
+const { BaseRatingSchema } = require('../../baseRatingSchema');
 const mongoose = require('mongoose');
 const schemeConstants = require('./schemeConstant');
 

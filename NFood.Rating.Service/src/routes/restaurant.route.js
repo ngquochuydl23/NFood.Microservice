@@ -14,7 +14,6 @@ const { findRestaurantById } = require('../external-services/restaurant.external
 
 router.get('/:restaurantId/', async (req, res) => {
     try {
-
         const ratings = await RestaurantRating
             .find({ restaurantId: req.params.restaurantId })
             .exec();

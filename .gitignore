@@ -34,13 +34,6 @@ client/.env.production.local
 .vs
 .vscode
 
-services/Social-v2.Clothes.UploadMediaApi/.env
-
-client/src/pages/dashboard/ListProduct.js
-services/Social-v2.Clothes.UploadMediaApi/.yarn
-
-clients/Social-v2.Clothes.Admin/node_modules
-clients/Social-v2.Clothes.Store/node_modules
 
 */.env
 */.yarn

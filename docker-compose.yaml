@@ -59,3 +59,13 @@ services:
     ports:
       - 1500:1500
     restart: always
+
+  nfood.user.api:
+    image: nfood.user.api
+    container_name: nfood.user.api
+    build:
+      context: ./NFood.User.Service
+      dockerfile: Dockerfile
+    ports:
+      - 1600:1600
+    restart: always
