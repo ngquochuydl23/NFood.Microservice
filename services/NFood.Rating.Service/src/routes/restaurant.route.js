@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const RestaurantRating = require('../models/restaurantRating');
 const { findRestaurantById } = require('../external-services/restaurant.external.api');
+const { findUserById } = require('../external-services/user.external.api');
 //const auth = require('../config/oauth2');
 
 // middleware that is specific to this router
@@ -9,8 +10,6 @@ const { findRestaurantById } = require('../external-services/restaurant.external
 //     console.log('Time: ', Date.now())
 //     next()
 // })
-
-
 
 router.get('/:restaurantId/', async (req, res) => {
     try {
@@ -42,12 +41,10 @@ router.post('/:restaurantId/', async (req, res) => {
 
         const [restaurant, reviewer] = await Promise
             .all([
-                findRestaurantById(req, restaurantId),
-                (async) => ({
-                    id: 1,
-                    fullName: 'Nguyễn Quốc Huy',
-                    avatar: '/storage/image/'
-                })])
+                findRestaurantById(req.headers('Authorization'), restaurantId),
+                findUserById(req.headers('Authorization'), reviewerId)
+            ])
+        findUser(req,)
             .catch((error) => {
                 return res
                     .status(400)
@@ -61,11 +58,7 @@ router.post('/:restaurantId/', async (req, res) => {
             content,
             rating,
             restaurantId,
-            reviewer: {
-                id: 1,
-                avatar: '/storage/',
-                fullName: 'Nguyễn Quốc Huy',
-            }
+            reviewer: reviewer
         });
 
         await restaurantRating.save();

@@ -7,6 +7,8 @@ const app = express();
 const { logRequest, logError } = require('./middlewares/loggingMiddleware');
 const { configureMongoDb } = require('./config/mongodb');
 const restaurantRoute = require('./routes/restaurant.route');
+const driverRoute = require('./routes/driver.route');
+const itemRoute = require('./routes/item.route');
 //const { connectRedisDb } = require('./config/redis');
 
 app.use(bodyParser.json());
@@ -19,7 +21,9 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use(logRequest);
-app.use('/rating-api/', restaurantRoute);
+app.use('/rating-api/restaurant/', restaurantRoute);
+app.use('/rating-api/driver/', driverRoute);
+app.use('/rating-api/item/', itemRoute);
 app.use(logError);
 
 app.listen(1500, () => {

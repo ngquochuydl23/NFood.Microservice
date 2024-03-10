@@ -30,6 +30,8 @@ client/.env.production.local
 # dependencies
 */node_modules
 
+services/*/node_modules
+
 #misc
 .vs
 .vscode

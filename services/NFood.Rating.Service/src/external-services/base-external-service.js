@@ -1,14 +1,14 @@
 const axios = require('axios');
 const _ = require('lodash')
 
-function getHttp(req, config) {
+function getHttp(jwtToken, config) {
 
     const http = axios.create({ baseURL: config.baseUrl });
 
     http.interceptors.request.use(
         (config) => {
 
-            config.headers['Authorization'] = req.header('Authorization');
+            config.headers['Authorization'] = 'Bearer ' + jwtToken;
             config.headers['Content-Type'] = `application/json-patch+json`;
             config.headers['accept'] = `*/*`;
 
