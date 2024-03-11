@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Ui.Rate.RateDriver">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/driverAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/illustration_avatar_default" />
+
+    <TextView
+        android:id="@+id/driverName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Nguyễn Ngọc Vân"
+        android:textColor="@color/titleTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="10dp"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/icon_rated_unactive"
+        app:srb_drawableFilled="@drawable/icon_rated_active"
+        app:srb_isIndicator="false"
+        app:srb_numStars="5"
+        app:srb_scrollable="true"
+        app:srb_starHeight="30dp"
+        app:srb_starWidth="30dp"
+        app:srb_stepSize="0.5" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:padding="10dp">
+
+    <EditText
+        android:id="@+id/enterReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="@string/share_your_reviews_herel_your_rating_and_review_will_be_kept_anonymous"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="10dp"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_border_rectangle_size5"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:text="@string/next" />
+  </LinearLayout>
+</LinearLayout>

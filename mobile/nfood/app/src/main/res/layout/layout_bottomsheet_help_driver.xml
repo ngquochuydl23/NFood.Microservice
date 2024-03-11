@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_border_top"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/layout_border_top"
+      android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/illustration_help_driver" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Whoaa, that restaurant is too far"
+        android:textColor="@color/titleTextColor"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We don't want to your food to get cold. Try ordering fro a restaurant closer to you"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="@color/white"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_border_rectangle_size5"
+        android:text="Skip"
+        android:textColor="@color/green"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addDetailAddressButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_border_item_size5"
+        android:backgroundTint="@color/green"
+        android:text="Add Detail Address"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+  </LinearLayout>
+</LinearLayout>

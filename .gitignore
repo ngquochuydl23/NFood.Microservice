@@ -7,19 +7,6 @@ client/node_modules
 client/.pnp
 client/.pnp.js
 
-# testing
-client/coverage
-
-# production
-client/build
-
-# misc
-client/.DS_Store
-client/.env.local
-client/.env.development.local
-client/.env.test.local
-client/.env.production.local
-
 # logs
 */npm-debug.log*
 */yarn-debug.log*
@@ -31,7 +18,12 @@ client/.env.production.local
 */node_modules
 
 services/*/node_modules
-
+mobile/*/.gradle/
+mobile/*/build/
+mobile/*/jdks/
+mobile/*/.idea/
+mobile/*/deamon/
+mobile/*/wrapper/
 #misc
 .vs
 .vscode

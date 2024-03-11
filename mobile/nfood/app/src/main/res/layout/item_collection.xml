@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="2dp"
+    android:layout_marginStart="10dp"
+    app:cardCornerRadius="5dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="320dp"
+      android:layout_height="180dp"
+      android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/collectionImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/color_gradient_collection"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+      <TextView
+          android:id="@+id/collectionTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Quán ngon Đà Lạt"
+          android:textColor="@color/white"
+          android:textSize="17sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/collectionSubtitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Cực hot với mùi vị thơm ngon đặc trưng"
+          android:textColor="@color/white" />
+    </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

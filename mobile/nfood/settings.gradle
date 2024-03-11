@@ -1,0 +1,3 @@
+rootProject.name='NFood'
+include ':app'
+include ':toolbar'

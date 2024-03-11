@@ -1,0 +1,455 @@
+{
+    "statusCode": 200,
+    "result": {
+        "listBanner": [
+            {
+                "id": 1,
+                "image": "http://channel.mediacdn.vn/2019/1/20/image005-15479948829561514367436.jpg"
+            },
+            {
+                "id": 1,
+                "image": "http://channel.mediacdn.vn/2019/1/20/image005-15479948829561514367436.jpg"
+            },
+            {
+                "id": 1,
+                "image": "http://channel.mediacdn.vn/2019/1/20/image005-15479948829561514367436.jpg"
+            },
+            {
+                "id": 1,
+                "image": "http://channel.mediacdn.vn/2019/1/20/image005-15479948829561514367436.jpg"
+            }
+        ],
+        "listCategory": [
+            {
+                "categoryId": 1,
+                "title": "Hamburger",
+                "image": "http://52.187.117.17/nwork-api/image/610431f9-32e7-4aad-8b24-88d89668209c.jpg"
+            },
+            {
+                "categoryId": 1,
+                "title": "Hamburger",
+                "image": "http://52.187.117.17/nwork-api/image/610431f9-32e7-4aad-8b24-88d89668209c.jpg"
+            },
+            {
+                "categoryId": 1,
+                "title": "Hamburger",
+                "image": "http://52.187.117.17/nwork-api/image/610431f9-32e7-4aad-8b24-88d89668209c.jpg"
+            },
+            {
+                "categoryId": 1,
+                "title": "Hamburger",
+                "image": "http://52.187.117.17/nwork-api/image/610431f9-32e7-4aad-8b24-88d89668209c.jpg"
+            },
+            {
+                "categoryId": 1,
+                "title": "Hamburger",
+                "image": "http://52.187.117.17/nwork-api/image/610431f9-32e7-4aad-8b24-88d89668209c.jpg"
+            },
+            {
+                "categoryId": 1,
+                "title": "Hamburger",
+                "image": "http://52.187.117.17/nwork-api/image/610431f9-32e7-4aad-8b24-88d89668209c.jpg"
+            }
+        ],
+        "listHome": [
+            {
+                "id": 1,
+                "title": "$0.49 Delivery Fee",
+                "subtitle": "Nearby restaurants delivered for less",
+                "type": "collection",
+                "listFood": null,
+                "listCollection": [
+                    {
+                        "collectionId": 1,
+                        "collectionImage": "https://scontent.fdad3-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/149581589_748881315744891_4814137521680383224_n.jpg?_nc_cat=107&ccb=3&_nc_sid=ae9488&_nc_ohc=K_qXkTXFt2MAX8ua8Or&_nc_ht=scontent.fdad3-2.fna&tp=7&oh=e99582684eb28ce343bd3268883d2a2e&oe=605267CC",
+                        "collectionTitle": "Let's Eat Pizza With Emily",
+                        "collectionSubtitle": "Delicious and nutritious"
+                    },
+                    {
+                        "collectionId": 1,
+                        "collectionImage": "https://scontent.fdad3-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/149581589_748881315744891_4814137521680383224_n.jpg?_nc_cat=107&ccb=3&_nc_sid=ae9488&_nc_ohc=K_qXkTXFt2MAX8ua8Or&_nc_ht=scontent.fdad3-2.fna&tp=7&oh=e99582684eb28ce343bd3268883d2a2e&oe=605267CC",
+                        "collectionTitle": "Let's Eat Pizza With Emily",
+                        "collectionSubtitle": "Delicious and nutritious"
+                    },
+                    {
+                        "collectionId": 1,
+                        "collectionImage": "https://scontent.fdad3-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/149581589_748881315744891_4814137521680383224_n.jpg?_nc_cat=107&ccb=3&_nc_sid=ae9488&_nc_ohc=K_qXkTXFt2MAX8ua8Or&_nc_ht=scontent.fdad3-2.fna&tp=7&oh=e99582684eb28ce343bd3268883d2a2e&oe=605267CC",
+                        "collectionTitle": "Let's Eat Pizza With Emily",
+                        "collectionSubtitle": "Delicious and nutritious"
+                    },
+                    {
+                        "collectionId": 1,
+                        "collectionImage": "https://scontent.fdad3-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/149581589_748881315744891_4814137521680383224_n.jpg?_nc_cat=107&ccb=3&_nc_sid=ae9488&_nc_ohc=K_qXkTXFt2MAX8ua8Or&_nc_ht=scontent.fdad3-2.fna&tp=7&oh=e99582684eb28ce343bd3268883d2a2e&oe=605267CC",
+                        "collectionTitle": "Let's Eat Pizza With Emily",
+                        "collectionSubtitle": "Delicious and nutritious"
+                    },
+                    {
+                        "collectionId": 1,
+                        "collectionImage": "https://scontent.fdad3-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/149581589_748881315744891_4814137521680383224_n.jpg?_nc_cat=107&ccb=3&_nc_sid=ae9488&_nc_ohc=K_qXkTXFt2MAX8ua8Or&_nc_ht=scontent.fdad3-2.fna&tp=7&oh=e99582684eb28ce343bd3268883d2a2e&oe=605267CC",
+                        "collectionTitle": "Let's Eat Pizza With Emily",
+                        "collectionSubtitle": "Delicious and nutritious"
+                    },
+                    {
+                        "collectionId": 1,
+                        "collectionImage": "https://scontent.fdad3-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/149581589_748881315744891_4814137521680383224_n.jpg?_nc_cat=107&ccb=3&_nc_sid=ae9488&_nc_ohc=K_qXkTXFt2MAX8ua8Or&_nc_ht=scontent.fdad3-2.fna&tp=7&oh=e99582684eb28ce343bd3268883d2a2e&oe=605267CC",
+                        "collectionTitle": "Let's Eat Pizza With Emily",
+                        "collectionSubtitle": "Delicious and nutritious"
+                    }
+                ],
+                "listRestaurant": null
+            },
+            {
+                "id": 2,
+                "title": "$0.49 Delivery Fee",
+                "subtitle": "Nearby restaurants delivered for less",
+                "type": "restaurant",
+                "listFood": null,
+                "listCollection": null,
+                "listRestaurant": [
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "$0.49 Delivery Fee",
+                "subtitle": "Nearby restaurants delivered for less",
+                "type": "restaurant",
+                "listFood": null,
+                "listCollection": null,
+                "listRestaurant": [
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    },
+                    {
+                        "restaurantId": 1,
+                        "restaurantName": "McDonald's® (Adams & Wells)",
+                        "restaurantImage": "https://i2-prod.birminghammail.co.uk/incoming/article16101897.ece/ALTERNATES/s615/6_McDonalds-main-image.jpg"
+                    }
+                ]
+            }
+        ],
+        "moreRestaurant": [
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            },
+            {
+                "restaurantId": 2,
+                "restaurantName": "KFC Camberwell - Church Street",
+                "restaurantImage": "https://cdn.concreteplayground.com/content/uploads/2020/04/Family-Feast-KFC-supplied.jpg",
+                "restaurantType": "Fried Chicken - American - Fast Food",
+                "restaurantRate": 4.5,
+                "deliveryTime": 23.0,
+                "distance": 5.0
+            }
+        ]
+    }
+}

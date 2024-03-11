@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/layout_border_item_size5"
+    android:backgroundTint="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingVertical="10dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="@string/found_worker"
+      android:textColor="@color/titleTextColor"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/driverAvatar"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_marginTop="10dp"
+      android:src="@drawable/illustration_avatar_default" />
+
+  <TextView
+      android:id="@+id/driverName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:gravity="center"
+      android:text="Nguyễn Quốc Huy"
+      android:textColor="@color/titleTextColor"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <com.willy.ratingbar.ScaleRatingBar
+      android:id="@+id/driverRated"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="10dp"
+      app:srb_clearRatingEnabled="true"
+      app:srb_clickable="false"
+      app:srb_drawableEmpty="@drawable/icon_rated_unactive"
+      app:srb_drawableFilled="@drawable/icon_rated_active"
+      app:srb_isIndicator="true"
+      app:srb_numStars="5"
+      app:srb_scrollable="false"
+      app:srb_starHeight="30dp"
+      app:srb_starWidth="30dp"
+      app:srb_stepSize="0.5" />
+
+  <TextView
+      android:id="@+id/driverMotor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Honda Wave Rs - 49P1-1568"
+      android:textColor="@color/titleTextColor"
+      android:textSize="16sp" />
+
+</LinearLayout>

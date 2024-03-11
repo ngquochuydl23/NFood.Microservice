@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Ui.Homescreen.HomeFragment">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/containerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:gravity="center_vertical"
+      android:paddingStart="10dp"
+      android:paddingEnd="20dp"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/iconMarker"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon_marker_home"
+        android:tint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iconMarker"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:drawableEnd="@drawable/icon_arrow_down"
+          android:drawablePadding="5dp"
+          android:ellipsize="end"
+          android:gravity="center_vertical"
+          android:maxLines="1"
+          android:text="@string/your_location"
+          android:textColor="@color/gray"
+          android:textSize="13sp" />
+
+      <TextView
+          android:id="@+id/currentAddress"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:gravity="center_vertical"
+          android:maxLines="1"
+          android:text="@string/location_could_not_be_found"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+    </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:paddingHorizontal="10dp"
+      android:paddingBottom="10dp"
+      app:layout_constraintTop_toBottomOf="@id/containerLayout">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="0dp"
+        android:layout_height="47.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/layout_border_item_size5"
+        android:backgroundTint="@color/whitesmoke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/filterButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginHorizontal="10dp"
+          android:src="@drawable/icon_search" />
+
+      <TextView
+          android:id="@+id/searchText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="@string/restautant_address_food"
+          android:textColor="@color/gray"
+          android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/filterButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/swipeRefreshLayout"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/header">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+      <LinearLayout
+          android:id="@+id/shimmerContain"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/white"
+          android:orientation="vertical"
+          android:visibility="gone">
+
+        <include layout="@layout/layout_shimmer_banner" />
+
+        <include layout="@layout/layout_shimmer_list_category" />
+
+        <include layout="@layout/layout_shimmer_list_collection" />
+
+        <include layout="@layout/layout_shimmer_list_collection" />
+
+      </LinearLayout>
+
+      <androidx.core.widget.NestedScrollView
+          android:id="@+id/nestedScrollView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+          <androidx.cardview.widget.CardView
+              android:id="@+id/cardview"
+              android:layout_width="match_parent"
+              android:layout_height="220dp"
+              android:layout_margin="10dp"
+              app:cardBackgroundColor="@color/white"
+              app:cardCornerRadius="5dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/white"
+                android:clipToPadding="false" />
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:id="@+id/wormDotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="10dp"
+                app:dotsColor="@color/white"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="12dp"
+                app:dotsSpacing="2dp" />
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/listCategory"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:clipToPadding="false"
+              android:nestedScrollingEnabled="false"
+              tools:itemCount="1"
+              tools:listitem="@layout/item_category" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/listHome"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clipToPadding="false"
+              android:nestedScrollingEnabled="false"
+              android:paddingTop="10dp"
+              tools:listitem="@layout/item_list_home" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:backgroundTint="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Recommended dishes"
+                android:textColor="@color/titleTextColor"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/moreRestaurant"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+      </androidx.core.widget.NestedScrollView>
+
+      <include
+          android:id="@+id/layoutNoInternet"
+          layout="@layout/layout_no_internet"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone" />
+    </FrameLayout>
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cart"
+      android:layout_width="55dp"
+      android:layout_height="55dp"
+      android:layout_margin="10dp"
+      app:cardCornerRadius="5dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:src="@drawable/icon_cart" />
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

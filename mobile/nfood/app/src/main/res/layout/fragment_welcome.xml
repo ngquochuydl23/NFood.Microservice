@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    tools:context=".Ui.Authentication.WelcomeFragment">
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="320dp"
+      android:cropToPadding="true"
+      android:src="@drawable/illustration_welcome" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/welcome_to_nfood"
+      android:textColor="@color/titleTextColor"
+      android:textSize="21sp"
+      android:textStyle="bold" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="15dp"
+      android:text="@string/your_go_to_app_for_a_hassle_free_life_we_re_here_to_help_all_your_needs_anytime_and_any_where"
+      android:textColor="@color/textColorPrimary"
+      android:textSize="15sp" />
+
+  <Button
+      android:id="@+id/gettingStartedButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/getting_started" />
+
+  <TextView
+      android:id="@+id/termOfServiceText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="15dp"
+      android:text="@string/by_logging_in_or_registering_i_agree_to_our_terms_of_service_and_privacy_policy"
+      android:textColor="@color/textColorPrimary" />
+</LinearLayout>

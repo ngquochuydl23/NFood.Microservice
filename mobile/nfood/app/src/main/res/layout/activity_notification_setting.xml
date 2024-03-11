@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Ui.Setting.NotificationSetting">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp">
+
+      <TextView
+          android:id="@+id/pushNotificationTitle"
+          style="@style/ItemSetting"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:text="Push Notifications"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Switch
+          android:id="@+id/onOffPushNotification"
+          android:layout_width="50dp"
+          android:layout_height="30dp"
+          android:layout_marginRight="10dp"
+          android:checked="true"
+          app:layout_constraintBottom_toBottomOf="@id/pushNotificationTitle"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="@id/pushNotificationTitle" />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="60dp"
+          android:paddingHorizontal="10dp"
+          android:text="@string/sub_title_push_notification_setting"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          app:layout_constraintLeft_toLeftOf="@id/pushNotificationTitle"
+          app:layout_constraintRight_toRightOf="@id/pushNotificationTitle"
+          app:layout_constraintTop_toBottomOf="@id/pushNotificationTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        layout="@layout/layout_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp">
+
+      <TextView
+          android:id="@+id/promotionsTitle"
+          style="@style/ItemSetting"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:text="Promotions"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Switch
+          android:id="@+id/onOffPromotions"
+          android:layout_width="50dp"
+          android:layout_height="match_parent"
+          android:layout_marginRight="10dp"
+          android:checked="true"
+          app:layout_constraintBottom_toBottomOf="@id/promotionsTitle"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="@id/promotionsTitle" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="60dp"
+          android:paddingHorizontal="10dp"
+          android:text="@string/sub_title_promotion_setting"
+          android:textColor="@color/gray"
+          android:textSize="15sp"
+          app:layout_constraintLeft_toLeftOf="@id/promotionsTitle"
+          app:layout_constraintRight_toRightOf="@id/promotionsTitle"
+          app:layout_constraintTop_toBottomOf="@id/promotionsTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </LinearLayout>
+
+</LinearLayout>

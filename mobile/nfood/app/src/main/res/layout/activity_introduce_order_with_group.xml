@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-38dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".Ui.OrderWithGroup.IntroduceOrderWithGroup">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:elevation="0dp">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/toolbarLayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="250dp"
+              android:scaleType="fitStart"
+              android:src="@drawable/illustration_ask_join_group_page2"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/invitation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="20dp"
+              android:text="Hi Emily, let's try the group ordering feature"
+              android:textColor="@color/titleTextColor"
+              android:textSize="24sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="20dp"
+              android:layout_marginTop="5dp"
+              android:text="@string/this_is_a_feature_that_helps_you_to_order_orders_with_friends_relatives_with_your_favorite_restaurant"
+              android:textAlignment="textStart"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            app:layout_collapseMode="pin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/icon_close_transparent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+  <Button
+      android:id="@+id/tryNowButton"
+      style="@style/ButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:text="@string/try_now" />
+</LinearLayout>
+

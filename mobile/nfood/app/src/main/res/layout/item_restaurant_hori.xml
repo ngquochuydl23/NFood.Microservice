@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="1dp"
+    android:layout_marginStart="10dp"
+    app:cardCornerRadius="5dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="wrap_content"
+      android:layout_height="260dp"
+      android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/restaurant"
+        app:layout_constraintDimensionRatio="W,1:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/green"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:text="Free Delivery"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/restaurantImage"
+        app:layout_constraintTop_toTopOf="@id/restaurantImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:text="25-40 min"
+        android:textColor="@color/titleTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/restaurantImage"
+        app:layout_constraintRight_toRightOf="@id/restaurantImage" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurantImage">
+
+      <TextView
+          android:id="@+id/restaurantName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:maxLines="2"
+          android:paddingHorizontal="10dp"
+          android:text="Trà sữa 8678 and Coffee"
+          android:textColor="@color/titleTextColor"
+          android:textSize="17sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:ellipsize="end"
+          android:maxLines="2"
+          android:paddingHorizontal="10dp"
+          android:text="Fast food - Milk tea"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="15sp" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:maxLines="2"
+          android:paddingHorizontal="10dp"
+          android:text="0.9 Milies away - Free Delivery"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="15sp" />
+    </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

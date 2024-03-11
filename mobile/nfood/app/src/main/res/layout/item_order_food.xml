@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/containerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingEnd="10dp"
+      android:paddingBottom="10dp"
+      tools:ignore="RtlSymmetry">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="2dp">
+
+      <ImageView
+          android:id="@+id/foodImage"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:maxLines="1"
+        android:text="Trà Sữa Okinawa"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/cardview"
+        app:layout_constraintRight_toLeftOf="@id/foodQuanlity"
+        app:layout_constraintTop_toTopOf="@+id/cardview" />
+
+    <TextView
+        android:id="@+id/foodPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="40.000đ"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foodAttributes" />
+
+    <TextView
+        android:id="@+id/foodAttributes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="7.5dp"
+        android:text="100% Kem\n50% Đường"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/cardview"
+        app:layout_constraintRight_toRightOf="@id/foodName"
+        app:layout_constraintTop_toBottomOf="@id/foodName" />
+
+    <TextView
+        android:id="@+id/foodQuanlity"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="x1"
+        android:textColor="@color/titleTextColor"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/foodName" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

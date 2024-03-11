@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "374214295131",
+    "project_id": "nfood-298413",
+    "storage_bucket": "nfood-298413.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374214295131:android:5d7b032664453ecb57897e",
+        "android_client_info": {
+          "package_name": "com.nsolution.nfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374214295131-8kcgv2coabjmdcp8vuqduru1mbs7vd8q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsolution.nfood",
+            "certificate_hash": "a6f451cc296e7061cbac5fcb37628d62f2cdd238"
+          }
+        },
+        {
+          "client_id": "374214295131-dime7c7d61alsfghf7jhgraej2illqcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzB0l2chNpV2Gq2ZyXERQDr02daO5MGvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374214295131-dime7c7d61alsfghf7jhgraej2illqcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

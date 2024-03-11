@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="horizontal"
+    android:paddingRight="10dp"
+    android:paddingLeft="5dp">
+
+  <ImageView
+      android:layout_width="19dp"
+      android:layout_height="match_parent"
+      android:src="@drawable/layout_incisor_voucher"
+      android:tint="@color/whitesmoke" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@color/whitesmoke"
+      android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/voucherImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingHorizontal="5dp"
+        android:src="@drawable/icon_nfood"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/voucherTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="50$ NWork Discount"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/voucherImage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/voucherImage" />
+
+    <TextView
+        android:id="@+id/voucherSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Ưu đãi giảm ngay 40$ tối đa 40k cho dịch vụ NWork"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/voucherTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voucherTitle" />
+
+    <TextView
+        android:id="@+id/voucherMinOrderPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Giá trị đơn hàng tối thiểu 100.000đ"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/voucherSubtitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/voucherSubtitle" />
+
+    <TextView
+        android:id="@+id/voucherStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hết hạn : Th9 27, 2020"
+        android:textColor="@color/titleTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/voucherDetailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="Detail"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

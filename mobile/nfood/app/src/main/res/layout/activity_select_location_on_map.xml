@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ui.SelectLocation.SelectLocationOnMap">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/layout_header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <com.mapbox.mapboxsdk.maps.MapView
+      android:id="@+id/mapView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toTopOf="@id/locationLayout"
+      app:layout_constraintTop_toBottomOf="@id/header" />
+
+  <ImageView
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:src="@drawable/icon_marker_home"
+      app:layout_constraintBottom_toBottomOf="@id/mapView"
+      app:layout_constraintLeft_toLeftOf="@id/mapView"
+      app:layout_constraintRight_toRightOf="@id/mapView"
+      app:layout_constraintTop_toTopOf="@id/mapView" />
+
+  <LinearLayout
+      android:id="@+id/locationLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="vertical"
+      android:padding="10dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent">
+
+    <TextView
+        android:id="@+id/street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="59 Xô Viết Nghệ Tĩnh"
+        android:textColor="@color/titleTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addressDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Phường 7, Thành phố Đà Lạt, Lâm Đồng"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/address"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address" />
+
+    <Button
+        android:id="@+id/confirmLocationButton"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/confirm_location" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

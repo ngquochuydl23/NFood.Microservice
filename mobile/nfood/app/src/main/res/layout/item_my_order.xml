@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white">
+
+  <LinearLayout
+      android:id="@+id/containerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp">
+
+      <ImageView
+          android:id="@+id/restaurantImage"
+          android:layout_width="match_parent"
+          android:layout_height="130dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/restaurant"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:background="#60000000"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/restaurantName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="10dp"
+          android:gravity="center"
+          android:text="Jet's Chicken (1144 S Wabash Ave)"
+          android:textColor="@color/white"
+          android:textSize="25sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="15dp">
+
+      <TextView
+          android:id="@+id/orderStatus"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Preparing your order"
+          android:textColor="@color/titleTextColor"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/orderId"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="Order : NF-23032020"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="16sp"
+          app:layout_constraintTop_toBottomOf="@id/orderStatus" />
+
+      <TextView
+          android:id="@+id/orderTime"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Estimated arrival: 5:05 PM"
+          android:textColor="@color/textColorPrimary"
+          android:textSize="16sp"
+          app:layout_constraintTop_toBottomOf="@id/orderId" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/view_shadow"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+      <TextView
+          android:id="@+id/numberItemAndPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1 item - 40.500đ"
+          android:textColor="@color/titleTextColor"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@id/orderAgainButton"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="@id/orderAgainButton" />
+
+
+      <Button
+          android:id="@+id/cancelOrderButton"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:background="@drawable/layout_border_rectangle_red_stroke_size5"
+          android:paddingHorizontal="10dp"
+          android:text="@string/cancel_order"
+          android:textAllCaps="false"
+          android:textColor="@color/red"
+          android:textSize="13sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Button
+          android:id="@+id/orderAgainButton"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:background="@drawable/layout_border_rectangle_red_stroke_size5"
+          android:paddingHorizontal="10dp"
+          android:text="@string/order_again"
+          android:textAllCaps="false"
+          android:textColor="@color/red"
+          android:textSize="13sp"
+          android:textStyle="bold"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

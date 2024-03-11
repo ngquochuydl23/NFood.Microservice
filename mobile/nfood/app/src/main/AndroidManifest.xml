@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.RECEIVE_SMS" />
+  <uses-permission android:name="android.permission.READ_SMS" />
+  <uses-permission android:name="android.permission.SEND_SMS" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:networkSecurityConfig="@xml/network_security_config"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+
+    <meta-data
+        android:name="firebase_messaging_auto_init_enabled"
+        android:value="false" />
+    <meta-data
+        android:name="firebase_analytics_collection_enabled"
+        android:value="false" />
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_launcher_foreground" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorAccent" />
+
+    <service
+        android:name=".Service.NotificationService"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+
+    <activity
+        android:name=".Ui.Order.OrderFinish"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Rate.RateFood"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Rate.RateDriver"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Rate.RateRestaurant"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.MyFavourite.MyFavourite"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.OrderWithGroup.IntroduceOrderWithGroup"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus" />
+    <activity
+        android:name=".Ui.Collection.CollectionDetail"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus" />
+
+    <activity
+        android:name=".Ui.OrderWithGroup.AskJoinGroup"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus" />
+    <activity
+        android:name=".Ui.Message.Message"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.OrderWithGroup.OrderWithGroup"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Restaurant.RestaurantDetail"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus" />
+    <activity
+        android:name=".Ui.Order.MyOrder"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.ViewAll.ViewAll"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.SelectLocation.SelectLocationOnMap"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Setting.Setting"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Food.FoodDetail"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus"
+        android:windowSoftInputMode="adjustResize" />
+    <activity
+        android:name=".Ui.Restaurant.Restaurant"
+        android:launchMode="singleTask"
+        android:theme="@style/TranslucentStatus" />
+    <activity
+        android:name=".Ui.Order.TrackingOrder"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Order.OrderDetail"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.InviteFriend.InviteFriend"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Setting.UpdateProfile"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Setting.LanguageSetting"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Setting.NotificationSetting"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Payment.SelectPayment"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Voucher.VoucherDetail"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Voucher.SelectVoucher"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.SelectLocation.SelectLocation"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Cart.Cart"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Search.SearchResult"
+        android:launchMode="singleTask" />
+    <activity
+        android:name=".Ui.Search.Search"
+        android:launchMode="singleTask" />
+
+    <activity
+        android:exported="true"
+        android:name=".Ui.Homescreen.Homescreen"
+        android:launchMode="singleTask">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+            android:host="www.example.com"
+            android:pathPrefix="/gizmos"
+            android:scheme="http" />
+
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".Ui.Authentication.AuthNavigationScreen"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize" />
+    <activity
+        android:exported="true"
+        android:name=".Ui.SplashScreen.SplashScreen"
+        android:theme="@style/SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

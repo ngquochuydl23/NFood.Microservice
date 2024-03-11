@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-38dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".Ui.Restaurant.Restaurant">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appBarLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:elevation="0dp">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/white"
+        app:elevation="0dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_collapseMode="none"
+          app:layout_collapseParallaxMultiplier="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <ImageView
+              android:id="@+id/restaurantImage"
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:backgroundTint="@color/white"
+              android:scaleType="centerCrop"
+              android:src="@drawable/restaurant"
+              app:layout_constraintDimensionRatio="H,3:2.1"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+          <TextView
+              android:id="@+id/restaurantName"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:ellipsize="end"
+              android:maxLines="2"
+              android:text="KFC Camberwell - Church Street"
+              android:textColor="@color/titleTextColor"
+              android:textSize="26sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/restaurantType"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:maxLines="1"
+              android:text="Vietnamese Food, Milk Tea, Snack"
+              android:textColor="@color/textColorPrimary"
+              android:textSize="16sp" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="20dp"
+              android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawablePadding="5dp"
+                  android:text="@string/deliver"
+                  android:textColor="@color/gray"
+                  android:textSize="16sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="21 min"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawablePadding="5dp"
+                  android:text="@string/minimum"
+                  android:textColor="@color/gray"
+                  android:textSize="16sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="20k"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawablePadding="5dp"
+                  android:text="@string/rating"
+                  android:textColor="@color/gray"
+                  android:textSize="16sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="4.5"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="17sp"
+                  android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moreInformation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawablePadding="5dp"
+                  android:text="@string/more"
+                  android:textColor="@color/gray"
+                  android:textSize="16sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawableStart="@drawable/icon_more_hori"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="18sp"
+                  android:textStyle="bold" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <include layout="@layout/layout_order_with_group" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="38dp"
+          android:elevation="10dp"
+          app:elevation="0dp"
+          app:layout_collapseMode="pin"
+          app:navigationIcon="@drawable/icon_back_transparent"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="60dp"
+            android:orientation="vertical">
+
+          <TextView
+              android:id="@+id/collapseTitle"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ellipsize="end"
+              android:gravity="center_horizontal"
+              android:maxLines="1"
+              android:textColor="@color/titleTextColor"
+              android:textSize="@dimen/tilte_activity"
+              android:textStyle="bold" />
+        </LinearLayout>
+      </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/CustomTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        app:elevation="0dp"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/green"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/RestaurantCategoryTabMode" />
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/listMenu"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:paddingBottom="100dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      tools:listitem="@layout/item_menu_parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/currentCartButton"
+      android:layout_width="match_parent"
+      android:layout_height="55dp"
+      android:layout_gravity="bottom"
+      android:layout_margin="10dp"
+      android:background="@drawable/layout_border_item_size5"
+      android:backgroundTint="@color/green"
+      android:orientation="horizontal"
+      android:paddingHorizontal="10dp"
+      app:layout_anchorGravity="bottom">
+
+    <TextView
+        android:id="@+id/currentCartCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="160.000đ"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numberItemAndRestaurantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="1 Item | McDonald's® (Adams &amp; Wells)"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/currentCartCost"
+        app:layout_constraintTop_toTopOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

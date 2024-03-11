@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp">
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/imageContain"
+      android:layout_width="100dp"
+      android:layout_height="80dp"
+      android:layout_margin="1dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </androidx.cardview.widget.CardView>
+
+  <TextView
+      android:id="@+id/restaurantName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:text="Trà sữa 8678"
+      android:textColor="@color/titleTextColor"
+      android:textSize="17sp"
+      android:textStyle="bold"
+      app:layout_constraintLeft_toRightOf="@id/imageContain"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/restaurantType"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:text="Milk tea"
+      android:textColor="@color/gray"
+      android:textSize="15sp"
+      app:layout_constraintLeft_toRightOf="@id/imageContain"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/restaurantName" />
+
+  <LinearLayout
+      android:id="@+id/moreContain"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="10dp"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal"
+      android:text="Milk tea"
+      android:textColor="@color/gray"
+      android:textSize="16sp"
+      app:layout_constraintLeft_toRightOf="@id/imageContain"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/restaurantType">
+
+    <ImageView
+        android:id="@+id/iconRate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_rated_active" />
+
+    <TextView
+        android:id="@+id/restaurantRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="4.7"
+        android:textColor="@color/gray" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_clock"
+        android:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/deliveryTimeAndDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="20 minutes - 2,3 km"
+        android:textColor="@color/gray" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_border_top"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="20dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_new_order_title"
+        android:textColor="@color/titleTextColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Your cart already contains an item from KFC Camberwell - Church Street. Would you like to clear the cart and add item from McDonald's® (Adams &amp; Wells) instead?"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp">
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_border_rectangle_size5"
+        android:text="@string/go_back"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:textSize="16.5sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/startNewOrderButton"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:text="@string/start_new_order" />
+  </LinearLayout>
+</LinearLayout>

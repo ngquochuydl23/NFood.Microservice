@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Ui.Cart.Cart">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <include
+          android:id="@+id/header"
+          layout="@layout/layout_header"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+      <androidx.core.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+          <LinearLayout
+              android:id="@+id/selectAddressClick"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+              <ImageView
+                  android:layout_width="23dp"
+                  android:layout_height="23dp"
+                  android:layout_marginHorizontal="10dp"
+                  android:src="@drawable/icon_marker_home" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/delivery_to"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="18sp"
+                  android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp">
+
+              <LinearLayout
+                  android:id="@+id/containerLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_marginStart="10dp"
+                  android:orientation="vertical"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/location_could_not_be_found"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/addDetailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:hint="@string/add_detail_address_to_driver"
+                    android:minHeight="30dp"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorPrimary"
+                    android:textSize="16sp" />
+
+              </LinearLayout>
+            </LinearLayout>
+          </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/selectDeliveryTimeClick"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_time"
+                android:textColor="@color/titleTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/deliveryTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+          </LinearLayout>
+
+          <RadioGroup
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="10dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="10dp"
+                android:text="@string/now"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="10dp"
+                android:text="@string/schedule"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+          </RadioGroup>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/view_shadow"
+              app:layout_constraintBottom_toBottomOf="parent" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:text="@string/order_summary"
+              android:textColor="@color/titleTextColor"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/orderSummarys"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:nestedScrollingEnabled="false"
+              tools:itemCount="4"
+              tools:listitem="@layout/item_cart" />
+
+          <Button
+              android:id="@+id/addItemButton"
+              android:textAllCaps="false"
+              style="?android:attr/borderlessButtonStyle"
+              android:textStyle="bold"
+              android:layout_width="wrap_content"
+              android:layout_height="40dp"
+              android:layout_gravity="end"
+              android:layout_marginEnd="10dp"
+              android:layout_marginBottom="10dp"
+              android:background="@drawable/layout_circle"
+              android:backgroundTint="@color/whitesmoke"
+              android:elevation="0dp"
+              android:paddingHorizontal="10dp"
+              android:text="@string/add_items"
+              android:textColor="@color/black"
+              android:textSize="15sp" />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/view_shadow"
+              app:layout_constraintBottom_toBottomOf="parent" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingVertical="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:gravity="center_vertical|left"
+                  android:text="@string/subtotal"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  tools:ignore="RtlHardcoded" />
+
+              <TextView
+                  android:id="@+id/subtotal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginEnd="10dp"
+                  android:gravity="right"
+                  android:text="130.000đ"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:layout_marginStart="10dp"
+                  android:text="@string/ship_fee"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/distance"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:layout_marginStart="5dp"
+                  android:text="(1 km)"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="16sp"
+                  android:textStyle="bold" />
+
+              <TextView
+                  android:id="@+id/shipFee"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginEnd="10dp"
+                  android:layout_weight="1"
+                  android:gravity="right"
+                  android:text="25.000đ"
+                  android:textColor="@color/titleTextColor"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/view_shadow"
+              app:layout_constraintBottom_toBottomOf="parent" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+
+            <TextView
+                android:id="@+id/titleUtensils"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/use_plastic_eating_utensils"
+                android:textColor="@color/titleTextColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/thank_you_for_helping_to_reduce_plastic_waste"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleUtensils" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/isUseUtensils"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/view_shadow"
+              app:layout_constraintBottom_toBottomOf="parent" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_to_door"
+                android:textColor="@color/titleTextColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/isDeliveryToDoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/view_shadow"
+              app:layout_constraintBottom_toBottomOf="parent" />
+
+          <TextView
+              android:id="@+id/selectVoucherButton"
+              style="@style/ItemSetting"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:drawableStart="@drawable/icon_promotion"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:singleLine="true"
+              android:text="@string/select_voucher" />
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="0.5dp"
+              android:layout_marginHorizontal="10dp"
+              android:layout_marginBottom="10dp"
+              android:background="@drawable/view_shadow"
+              app:layout_constraintBottom_toBottomOf="parent" />
+
+          <TextView
+              android:id="@+id/selectPaymentButton"
+              style="@style/ItemSetting"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:drawableStart="@drawable/icon_payment"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:singleLine="true"
+              android:text="@string/select_payment" />
+        </LinearLayout>
+      </androidx.core.widget.NestedScrollView>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@drawable/view_shadow" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="@string/total"
+              android:textColor="@color/titleTextColor"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/total"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="16dp"
+              android:text="160.000đ"
+              android:textColor="@color/titleTextColor"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/orderButton"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/order" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center" />
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
