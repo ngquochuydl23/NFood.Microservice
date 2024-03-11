@@ -33,7 +33,7 @@ class Homescreen : BaseActivity(), HttpClient, FindLocationFragment.FindLocation
   private val OrderFragment = OrderFragment()
   private val NotificationFragment = NotificationFragment()
   private val ProfileFragment = ProfileFragment()
-  private val FindLocationFragment = FindLocationFragment()
+  private val FindLocationFragment = FindLocationFragment1()
   
   private val HomeFragmentTag = "HomeFragmentTag"
   private val OrderFragmentTag = "OrderFragmentTag"

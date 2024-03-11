@@ -11,7 +11,7 @@
     tools:context=".Ui.Homescreen.FindLocationFragment">
 
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/markerAnimate"
+      android:id="@+id/markerAnimateView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:scaleType="centerCrop"
@@ -20,7 +20,7 @@
       app:lottie_rawRes="@raw/find_location" />
 
   <TextView
-      android:id="@+id/currentAddress"
+      android:id="@+id/currentAddressTextView"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginHorizontal="20dp"

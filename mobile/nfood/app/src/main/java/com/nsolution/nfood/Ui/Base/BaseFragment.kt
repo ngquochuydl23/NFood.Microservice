@@ -3,19 +3,24 @@ package com.nsolution.nfood.Ui.Base
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.nsolution.nfood.R
 import com.nsolution.nfood.SharedReferences.SaveToken
 
 abstract class BaseFragment : Fragment() {
+  
+  private var viewResource : Int? = null;
   
   var isNetworkConnected: Boolean = false
   
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    checkNetworkConnect()
   }
   
   open fun navigateTo(activity: Class<*>) {
@@ -32,13 +37,14 @@ abstract class BaseFragment : Fragment() {
     return "Bearer " + token
   }
   
-  fun checkNetworkConnect() {
-    val connectManager =
-      context?.getSystemService(AppCompatActivity.CONNECTIVITY_SERVICE) as ConnectivityManager
-    isNetworkConnected = connectManager.activeNetworkInfo != null && connectManager.activeNetworkInfo!!.isConnected
-  }
-  
   fun showBottomSheet(bottomSheet : BottomSheetDialogFragment){
     bottomSheet.show(childFragmentManager, bottomSheet.tag)
+  }
+  
+  override fun onCreateView(
+    inflater: LayoutInflater, container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
+    return inflater.inflate(R.layout.fragment_find_location, container, false)
   }
 }
