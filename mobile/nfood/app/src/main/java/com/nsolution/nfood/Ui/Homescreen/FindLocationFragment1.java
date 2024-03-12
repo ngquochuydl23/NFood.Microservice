@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 
+import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
@@ -35,8 +36,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.nsolution.nfood.Models.ShippingAddressDto;
 import com.nsolution.nfood.R;
 import com.nsolution.nfood.Ui.Base.BaseFragment1;
+import com.nsolution.nfood.Utils.LocationUtil;
 
 
 public class FindLocationFragment1 extends BaseFragment1 {
@@ -47,11 +50,9 @@ public class FindLocationFragment1 extends BaseFragment1 {
     private final int REQUEST_CHECK_SETTINGS = 0x1;
     private final long UPDATE_INTERVAL_IN_MILLISECONDS = 10000;
     private final long FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS = UPDATE_INTERVAL_IN_MILLISECONDS / 2;
-    private final String KEY_REQUESTING_LOCATION_UPDATES = "requesting-location-updates";
-    private final String KEY_LOCATION = "location";
-    private final String KEY_LAST_UPDATED_TIME_STRING = "last-updated-time-string";
     private FusedLocationProviderClient mFusedLocationClient;
     private SettingsClient mSettingsClient;
+    private LocationUtil locationUtil;
     private LocationRequest mLocationRequest;
     private Location mCurrentLocation;
     private Boolean mRequestingLocationUpdates;
@@ -70,8 +71,9 @@ public class FindLocationFragment1 extends BaseFragment1 {
 
         markerAnimateView = view.findViewById(R.id.markerAnimateView);
         currentAddressTextView = view.findViewById(R.id.currentAddressTextView);
-
         markerAnimateView.setAnimation(R.raw.find_location);
+
+        locationUtil = new LocationUtil(getContext());
     }
 
     private void setupLocationRequest() {
@@ -93,20 +95,22 @@ public class FindLocationFragment1 extends BaseFragment1 {
             @Override
             public void onLocationResult(@NonNull LocationResult locationResult) {
                 super.onLocationResult(locationResult);
-
                 mCurrentLocation = locationResult.getLastLocation();
-                // mLastUpdateTime = DateFormat.getTimeInstance().format(Date())
 
                 if (mCurrentLocation != null) {
                     Log.i(LOG_TAG, mCurrentLocation.toString());
 
+                    updateUi();
                     stopLocationUpdate();
-                    //AddressFromLocation
-                    currentAddressTextView.setText("");
 
+                    ShippingAddressDto address = locationUtil.getGeoLocation(mCurrentLocation);
+                    Log.i(LOG_TAG, address.toString());
 
+                    currentAddressTextView.setText(address.getStreet());
                 } else {
-                    currentAddressTextView.setText("Location not found");
+                    String warningMsg = "Location not found";
+                    Log.w(LOG_TAG, warningMsg);
+                    currentAddressTextView.setText(warningMsg);
                 }
             }
         };
@@ -219,5 +223,24 @@ public class FindLocationFragment1 extends BaseFragment1 {
             Log.i(LOG_TAG, "Permissions are allowed by user");
             setupLocationRequest();
         }
+    }
+
+    public void updateUi() {
+        if (mCurrentLocation == null) {
+            return;
+        }
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                markerAnimateView.pauseAnimation();
+                getFragmentManager()
+                        .beginTransaction()
+                        .remove(FindLocationFragment1.this)
+                        .commit();
+            }
+        }, 2000);
+
+
     }
 }
