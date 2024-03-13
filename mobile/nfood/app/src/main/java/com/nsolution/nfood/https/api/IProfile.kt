@@ -1,4 +1,4 @@
-package com.nsolution.nfood.Network.InterfaceService
+package com.nsolution.nfood.https.api
 
 import com.nsolution.nfood.Models.AccountDto
 import com.nsolution.nfood.Models.ResultAction

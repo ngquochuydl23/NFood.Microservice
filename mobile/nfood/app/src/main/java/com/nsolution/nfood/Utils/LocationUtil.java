@@ -24,8 +24,8 @@ public class LocationUtil {
     public ShippingAddressDto getGeoLocation(Location location) {
         LatLng latLng = new LatLng(location);
 
-        Double lat = latLng.getLatitude();
-        Double lng = latLng.getLongitude();
+        double lat = latLng.getLatitude();
+        double lng = latLng.getLongitude();
         try {
             Address address = geocoder
                     .getFromLocation(latLng.getLatitude(), latLng.getLongitude(), 1)

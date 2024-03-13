@@ -1,4 +1,4 @@
-package com.nsolution.nfood.http;
+package com.nsolution.nfood.https;
 
 import retrofit2.Retrofit;
 

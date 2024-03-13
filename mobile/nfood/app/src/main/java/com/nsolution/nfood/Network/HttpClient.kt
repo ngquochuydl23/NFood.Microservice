@@ -20,6 +20,7 @@ interface HttpClient {
   private fun retrofitBuilder(baseUrl: String) : Retrofit{
     return Retrofit.Builder()
       .baseUrl(baseUrl)
+
       .addConverterFactory(GsonConverterFactory.create())
       .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
       .client(httpClient.build())
